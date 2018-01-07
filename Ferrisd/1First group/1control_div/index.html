@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#box {
+			width: 300px;
+			/*background-color: yellow;*/
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		#div1 {
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<input type="button" value="变宽">
+		<input type="button" value="变高">
+		<input type="button" value="变色">
+		<input type="button" value="隐藏">
+		<input type="button" value="重置">
+		<div id="div1"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload = function() {
+		var oDiv = document.getElementById('div1');
+		var oBt1 = document.getElementsByTagName('input')[0];
+		var oBt2 = document.getElementsByTagName('input')[1];
+		var oBt3 = document.getElementsByTagName('input')[2];
+		var oBt4 = document.getElementsByTagName('input')[3];
+		var oBt5 = document.getElementsByTagName('input')[4];
+
+		oBt1.onclick = function() {
+			oDiv.style.width = '200px';
+		}
+		oBt2.onclick = function() {
+			oDiv.style.height = '200px';
+		}
+		oBt3.onclick = function() {
+			oDiv.style.backgroundColor = 'red';
+		}
+		oBt4.onclick = function() {
+			oDiv.style.display = 'none';
+		}
+		oBt5.onclick = function() {
+			oDiv.style.height = '100px';
+			oDiv.style.width = '100px';
+			oDiv.style.display = 'block';
+			oDiv.style.backgroundColor = 'black';
+		}
+	} 
+</script>
+</html>
